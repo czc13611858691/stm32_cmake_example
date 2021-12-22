@@ -47,7 +47,3 @@ $ mingw32-make.exe -j
 ```
 
 如果要重新使用makefile生成，删除cmake-build-debug下所有文件
-
-**3.文档**
-
-[链接](https://czc13611858691.github.io/czc13611858691.gihub.io/2021/12/22/cmake%E6%9E%84%E5%BB%BA%E5%8D%95%E7%89%87%E6%9C%BA%E5%B7%A5%E7%A8%8B/)
