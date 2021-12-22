@@ -1,0 +1,60 @@
+{
+    
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+    
+            "dependsOn":"clean",
+            "label": "build",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "-j4"
+            ],
+            "group": "build",
+            "problemMatcher": "$gcc"
+        },
+        {
+    
+            "label": "clean",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "clean"
+            ],
+            "problemMatcher": "$gcc"
+        },
+        {
+    
+            "dependsOn":"build",
+            "label": "ocdflash",
+            "type": "shell",
+            "command": "openocd",
+            "args": [
+                "-f",
+                "cmsis-dap.cfg",
+                "-f",
+                "stm32f4x.cfg",
+                "-c",
+                "program nucleo-f413zh.hex verify reset"
+            ],
+            "problemMatcher": []
+        },
+        {
+    
+            "dependsOn":"build",
+            "label": "ocddebug",
+            "type": "shell",
+            "command": "openocd",
+            "args": [
+                "-f",
+                "cmsis-dap.cfg",
+                "-f",
+                "stm32f4x.cfg",
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

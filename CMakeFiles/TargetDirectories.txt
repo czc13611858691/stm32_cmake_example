@@ -1,0 +1,3 @@
+D:/DESK/github/stm32_cmake_example/CMakeFiles/nucleo-f413zh.out.dir
+D:/DESK/github/stm32_cmake_example/CMakeFiles/edit_cache.dir
+D:/DESK/github/stm32_cmake_example/CMakeFiles/rebuild_cache.dir
