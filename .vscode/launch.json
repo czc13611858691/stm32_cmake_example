@@ -54,7 +54,13 @@
                 "cmsis-dap.cfg",
                 "stm32f4x.cfg"
             ],
-            "debugServer": 3333
+            "debugServer": 3333,
+            "interface": "swd",
+            "swoConfig": {
+                "enabled": true,
+                "cpuFrequency": 8000000,
+                "swoFrequency": 100000,
+            }
         }
     ]
 }
